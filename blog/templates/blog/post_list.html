@@ -10,61 +10,15 @@
         <h1><a href="/">Blog do Sigmoidal</a></h1>
     </header>
 
-    <article>
-        <time>publicado: 01.01.2023, 08:14</time>
-        <h2><a href="">Aprenda Data Science ou pague o preço</a></h2>
-        <p>Dizem que os dados são o novo petróleo da humanidade, e agora você vai ver por que isso é verdade. Descubra
-            também as oportunidades para a carreira de Cientista de Dados em 2023.
-            Tenho a satisfação de anunciar que o Sigmoidal chegou até um dos maiores podcasts do Brasil, o Primocast.
-            Nesse bate-papo com o Thiago Nigro (o Primo Rico), Rodrigo Gianotto, Kaique e Lucão, todos do Grupo Primo,
-            saíram inúmeros insights sobre como os dados podem ajudar o seu negócio a prosperar, crescer e vender ainda
-            mais.
+    {% for post in posts %}
+        <article>
+            <time>publicado: {{ post.published_date }}</time>
+            <h2><a href="">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
 
-            Além disso, conversamos muito sobre o mercado de trabalho de tecnologia atual, as oportunidades para quem
-            quer começar uma nova carreira do absoluto zero e qual o caminho para conquistar uma vaga de cientista de
-            dados em 2023. Como você vai ver, Data Science não é apenas a área mais inovadora do mundo, mas também a
-            mais democrática, pois independe da sua idade ou formação.
 
-            E aproveitando a primeira semana do ano, eu quero lhe fazer um convite especial: quero convidá-lo para o
-            maior evento de Data Science que o Sigmoidal já promoveu.
-
-            Clique no botão abaixo para se inscrever no evento “A DECISÃO”, e descubra o plano que vai fazê-lo sair do
-            zero até uma vaga em Data Science.</p>
-
-    </article>
-
-    <article>
-        <time>publicado: 02.01.2023, 06:20</time>
-        <h2><a href="">Como usar o DALL-E 2 para gerar imagens a partir de textos</a></h2>
-        <p>Nem todos possuem habilidades para desenho ou manipulação no Photoshop. No entanto, agora todos podem ter
-            acesso à Inteligência Artificial (IA) da empresa OpenAI, conhecida como DALL-E 2, para criar imagens a
-            partir de simples descrições textuais.
-
-            O mais interessante é que o DALL-E 2 cria imagens 100% originais, realistas, e ainda pode combinar
-            conceitos, atributos e estilos de artistas conhecidos. Inclusive, esse tipo de tecnologia impulsionou a onda
-            da NFTs, que pudemos acompanhar recentemente no mundo.
-
-            Se você acha que eu estou falando de imagens malfeitas, eu o convido a dar uma olhada na galeria abaixo.
-            Todas estas imagens foram geradas a partir das descrições da legenda.
-
-            Você diria que elas foram feitas por uma máquina?</p>
-    </article>
-
-    <article>
-        <time>publicado: 05.01.2023, 06:20</time>
-        <h2><a href="">Como a França usou Inteligência Artificial para detectar 20 mil piscinas</a></h2>
-        <p>“Você pode correr, mas não pode se esconder” é uma frase marcante de filmes antigos de terror, como o
-            clássico “Sexta-Feira 13”, do matador impiedoso Jason Voorhees. Digamos que a Direção-Geral das Finanças
-            Públicas da França (DGFiP) colocou essa frase em prática ano passado, mas para a detecção de algo que esse
-            país entende muito: piscinas.
-
-            Segundo dados da página de dados Statista, havia 3,2 milhões de piscinas privadas na França em 2020 – número
-            que aumentou e muito durante a pandemia de COVID-19, período em que as pessoas ficaram mais em suas casas –,
-            fazendo esse país o segundo com o maior número dessas construções per capita do mundo.
-
-            Em função desse grande número dessas construções, da arrecadação e do uso da água nesse país (a França
-            enfrenta sua pior seca, que deixou mais de 100 comunidades sem água potável), as autoridades fiscais desse
-            país resolveram regularizar a situação das casas ao fisco.</p>
 </body>
 
 </html>
